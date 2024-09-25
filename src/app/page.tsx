@@ -1,113 +1,60 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Stepper from "@/components/shared/Stepper";
+import { IconSparkles, IconArrow2, IconStar, IconArrow3 } from "../../public/Icons";
+import MultiStepStory from "@/components/shared/MultiStep";
+import NavButtons from "@/components/shared/NavButtons";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="relative flex flex-col md:items-center justify-center mt-6 mb-10 mx-2 md:mx-8 xl:mx-auto overflow-hidden">
+      <Link
+        href="#"
+        className="group rounded-full h-7 m-auto items-center bg-gradient-to-tl from-[#64D5FF] via-[#FEB09A] to-[#FE5391] p-px"
+      >
+        <div className="p-px text-slate-200 bg-[#030712] group-hover:bg-slate-900 transition-colors duration-100  size-full rounded-full px-4 md:px-6 inline-flex gap-1 items-center justify-center">
+          <p className="font-light text-sm group-hover:text-slate-50">
+            See more projects <span className='sr-only'>I've created</span>
+          </p>
+          <IconArrow2 className="group-hover:translate-x-3 transition-all duration-200" />
         </div>
-      </div>
+      </Link>
+      <header className="relative mb-2">
+        <h1 className="text-6xl text-wrap text-center tracking-tight py-3 text-slate-50 -z-10">
+          Create Your own Personalized
+          <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#64D5FF] via-[#FEB09A] to-rose-400 from-50% via-70% to-100%">
+            Story with Artificial Intelligence
+          </span>
+          <IconSparkles className="absolute top-16 right-2 md:-right-14 text-3xl md:text-5xl md:rotate-180 text-[#64D5FF] animate-pulse" />
+        </h1>
+      </header>
+      <p className="text-slate-400 max-w-2xl m-auto text-center mb-5 font-light">Start creating a <span className='font-semibold text-slate-300'>story</span> with artificial intelligence by choosing a <span className='font-semibold text-slate-100'>genre</span>, a <span className='font-semibold text-slate-100'>theme</span> and up to 5 different <span className='font-semibold text-slate-100'>characters</span> which you can <span className='font-semibold text-slate-100'>personalize</span>, such as adding their <span className='font-semibold text-slate-100'>name, role and special abilities</span>.</p>
+      <Link
+        href="#"
+        className="relative group mb-10 mx-4 md:mx-0" 
+      >
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#64D5FF] via-[#FEB09A] to-rose-400 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt " />
+        <div className="relative inline-flex items-center justify-center w-full px-6 py-3 gap-3 bg-gray-200 rounded-lg">
+          <IconStar className='stroke-yellow-700 text-yellow-500 text-xl' />
+          <p className="text-slate-950 font-medium">Go to repository</p>
+          <IconArrow3 className='text-xl rotate-180 text-slate-800' />
+        </div>
+      </Link>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className='relative w-full max-w-6xl rounded-lg mt-2 border border-slate-500 backdrop-blur-3xl p-4 bg-gray-950'>
+        <div className="inline-flex w-full justify-center items-center mb-8">
+          <div className="size-1.5 rounded-full bg-slate-500" />
+          <div className="h-px bg-slate-500 flex-1" />
+          <div className="h-px bg-slate-500 w-6" />
+          <Stepper />
+          <div className="h-px bg-slate-500 w-6" />
+          <div className="h-px bg-slate-500 flex-1" />
+          <div className="size-1.5 rounded-full bg-slate-500" />
+        </div>
+        <MultiStepStory />
+        <NavButtons />
+      </section>
     </main>
   );
 }
